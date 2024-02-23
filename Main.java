@@ -11,11 +11,14 @@ public class Main {
         agenda.cadastrarConsulta(consultaMedico);
         agenda.cadastrarConsulta(consultaPaciente);
 
-        agenda.removerConsulta("Maria");
+        // Remover a consulta usando o nome do paciente
+        agenda.removerConsulta(paciente.getNome());
+
+        // Listar as consultas agendadas
         agenda.listarConsultas();
+
+        // Fechar a conexão com o banco de dados
+        agenda.fecharConexao();
     }
-
-
 }
 
-    
